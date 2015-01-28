@@ -1,0 +1,13 @@
+.displayNone {
+    display: none;
+}
+@media screen and (min-width:981px) {
+    .hideDesktop {
+        display: none !important;
+    }
+}
+@media screen and (max-width:980px) {
+    .hideMobile {
+        display: none !important;
+    }
+}

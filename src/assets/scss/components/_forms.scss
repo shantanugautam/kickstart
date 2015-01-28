@@ -1,0 +1,156 @@
+$msg-color: #666;
+$label-color : #09f;
+
+%label-movement {
+    opacity:1;
+    font-size: 1em;
+    color: $label-color;
+    top: -.25rem;
+    transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+}
+
+.section-form {
+    // display: flex;
+    width:100%;
+    // flex-flow: row wrap;
+    padding: 15px;
+    .infoTip {
+        display: block;
+        margin-bottom: 15px;
+        color:$msg-color;
+    }
+    input,
+    textarea {
+        padding: .5rem 10px .25rem;
+        border: 0 !important;
+        box-shadow: 0 2px 0px 0px rgba(102, 102, 102, 0.08) !important;
+        width: 100%;
+        max-width: 100%;
+        flex: 1;
+        font-size: 1rem;
+        ~ span {
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $label-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+        }
+        &:disabled {
+            color: #a9a9a9;
+        }
+
+    }
+    @media screen and (min-width : 581px) {
+        .section-input--padded {
+            // padding-left : 10px;
+            // padding-right : 10px;
+            .link-edit {
+                  right: 0;
+                  padding: 10px;
+                  font-size: 8px;
+            }
+        }
+    }
+    .section-input {
+        width: 100%;
+        // flex: 1 1 auto;
+        margin: 0.75rem 0 0.05rem;
+        position: relative;
+        &:focus {
+            outline:1px solid rgba(0,0,0,.1);
+            box-shadow: 0 0 3px $label-color;
+            transition: 0.2s ease-in border , 0.5s ease-in box-shadow;
+        }
+        textarea {
+            &:focus {
+                outline:1px solid rgba(0,0,0,.1);
+                box-shadow: 0 0 3px $label-color;
+                transition: 0.2s ease-in border , 0.5s ease-in box-shadow;
+            }
+        }
+        label {
+            color: #999;
+            padding: 0 0 0 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1em;
+            transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+            pointer-events: none;
+            opacity: 0;
+        }
+        &.wide {
+            width: 100%;
+        }
+        .section-disabled {
+            position:absolute;
+            height:100%;
+            width:100%;
+            z-index:3;
+            background:transparent;
+        }
+        input,textarea {
+            &:focus {
+                outline: 0;
+                ~ label {
+                    @extend %label-movement;
+                }
+                ~ span {
+                    width: 100%;
+                    transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+                }
+            }
+            &:valid ~ label,
+            &.not-empty ~ label {
+                @extend %label-movement;
+            }
+        }
+        &.w-1-2 {
+            width: 50%;
+        }
+    }
+}
+.message-error {
+    color: red;
+    transition: 0.4s ease-in;
+    @extend .clearfix;
+    margin-bottom: 5px;
+}
+.message-error.ng-hide {
+    transition: 0.3s ease-in;
+}
+.link-edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom:0;
+    background: #f9f9f9;
+}
+.addfdHolder {
+    & > label {
+        display: block;
+        position: relative;
+    }
+}
+
+%formMsg {
+    transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+    padding:0.25em 10px;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+}
+.formMsg {
+    &-error {
+        color: red;
+        @extend %formMsg;
+    }
+}
+.formMsg {
+    &-info {
+        color: #666;
+        @extend %formMsg;
+    }
+}

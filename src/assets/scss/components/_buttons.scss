@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------
+[Main]
+
+Device:             ALL
+Project:            MMVPAY SG GC
+Version:            1.0
+Last change:        3/11/14 [Init]
+Assigned to:        Shantanu Gautam
+Primary use:        Main Site Skin Build
+-------------------------------------------------------------------*/
+
+$primary-colour:#3EA83E;
+$secondary-colour:#09f;
+$disabled-colour:#f9f9f9;
+
+
+@mixin button($bg,$size,$color) {
+    display: inline-block;
+    border-radius: 3px;
+    background: $bg;
+    border: 1px solid darken($bg, 10%);
+    color: $color !important;
+    text-decoration: none;
+    transition: background 0.2s ease-out, border 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    &:hover {
+        background: darken($bg,15%);
+        background: darken($bg,18%);
+        transition: background 0.3s ease-in, border .5s ease-out;
+    }
+    @if $size == "small" {
+        font-size: .8rem;
+        padding: .25em 1em;
+    }
+    @else if $size == "medium" {
+        font-size: 1.2rem;
+        padding: .5em 2em;
+    }
+    @else if $size == "large" {
+        font-size: 1.4rem;
+        padding: .75em 2.5em;
+    }
+}
+
+
+.btn-primary ,
+a.btn-primary ,
+a.btn-primary:link ,
+a.btn-primary:link:visited {
+    @include button($primary-colour, medium,#fff);
+}
+.btn-primary:disabled ,
+a.btn-primary:disabled ,
+a.btn-primary:disabled:link ,
+a.btn-primary:disabled:link:visited
+.btn-secondary:disabled {
+    @include button($disabled-colour, medium ,#ddd);
+    cursor: disabled;
+}
+.btn-negative {
+    @include button($disabled-colour, medium, #ddd);
+}
+.btn-secondary-small {
+    @include button($secondary-colour, small ,#fff);
+}
+
+.ripple {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+  background: #fff;
+  opacity: 1;
+}
+
+// animation effect
+.ripple.animate {
+  -webkit-animation: ripple .5s linear;
+  -moz-animation: ripple .5s linear;
+  -ms-animation: ripple .5s linear;
+  -o-animation: ripple .5s linear;
+  animation: ripple .5s linear;
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    -moz-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-ms-keyframes ripple {
+  100% {
+    opacity: 0;
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+.btnGrp {
+    font-size: 0;
+    li {
+        display: inline-block;
+        font-size: 16px;
+        width: 50%;
+        a {
+            display: block;
+        }
+    }
+}
+
+.btn-blk {
+    display: block;
+    text-align: center;
+    width: 100%;
+}

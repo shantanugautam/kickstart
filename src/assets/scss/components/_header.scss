@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------
+[Main]
+
+Device:             ALL
+Project:            MMVPAY SG GC
+Version:            1.0
+Last change:        3/11/14 [Init]
+Assigned to:        Shantanu Gautam
+Primary use:        Main Site Skin Build
+-------------------------------------------------------------------*/
+
+$notifybg:              #09f;
+$cboxBorder:            #DDDDDD;
+$cboxbg:                #FFFFFF;
+$headerBg:              #FFFFFF;
+$hBtnCol:               #09f;
+$mainTitleColor :       #333;
+$link-color:            #09f;
+
+
+.headerMain {
+    // height: 44px;
+    max-height: 57px;
+    z-index: 1000;
+    background-color: $headerBg;
+    width: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    border-bottom:1px solid $cboxBorder;
+    box-shadow:0 1px 5px $cboxBorder;
+    transition:opacity .3s ease-in,position .1s ease-in;
+    @extend .clearfix;
+    .btn-primary, a.btn-primary, a.btn-primary:link, a.btn-primary:link:visited {
+        padding: 0px 10px !important;
+        font-size: 14px !important;
+    }
+    img {
+        max-height: 40px;
+        width: auto;
+    }
+    .hasDropdown {
+        a {
+            position: relative;
+        }
+    }
+    .outerWrap {
+        max-width: 1024px;
+        margin: auto;
+    }
+    .title {
+        position: absolute;
+        top: 0;left: 0;display: block;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 44px;
+        color: $hBtnCol;
+        height: 44px;
+        text-align: center;
+        text-shadow: 0 -1px rgba(250, 250, 250, .5);
+        white-space: nowrap;
+        margin: 0;
+        background-color: $cboxbg;
+    }
+    .buttonLeft {
+        float: left;
+        margin: 0;
+    }
+    .buttonBack {
+        padding-left:5px;
+        padding-right: 5px;
+    }
+    .titleHolder {
+        color: $hBtnCol;
+        a,a:link,a:visited {
+            color:$hBtnCol;
+        }
+    }
+    .title.titleDash {
+        a:link,a:visited {
+            text-decoration: none;
+        }
+    }
+}
+.menu-mobile {
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    text-decoration: none;
+    font-size: 2em;
+}
+.elNotification {
+    position: absolute;
+    top: -0.25em;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+    background: $notifybg;
+    border-radius:50%;
+    font-size: 10px;
+    line-height: 20px;
+    border: 1px inset #fff;
+}
+.logo {
+    text-align: center;
+}
+
+@media screen and (min-width: 981px) {
+    .links {
+        @extend .clearfix;
+        margin-top: 1em;
+        .last {
+            float: right;
+        }
+        .logo {
+            float: left;
+            text-align: left;
+        }
+        a {
+            display: inline-block;
+            // padding: 1em;
+            font-size: 1.4em;
+            line-height: 40px;
+            text-decoration: none;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        li {
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    header {
+        .links {
+            max-width: 1024px;
+            margin-bottom: auto;
+        }
+    }
+    .menu-mobile {
+        display: none;
+    }
+}

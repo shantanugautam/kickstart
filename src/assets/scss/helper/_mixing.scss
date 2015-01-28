@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+[Main]
+
+Device:             ALL
+Project:            MMVPAY SG GC
+Version:            1.0
+Last change:        3/11/14 [Init]
+Assigned to:        Shantanu Gautam
+Primary use:        Main Site Skin Build
+-------------------------------------------------------------------*/
+
+* {
+    box-sizing:border-box;
+    &:before , &:after {
+        box-sizing:border-box;
+    }
+}
+body{font-size:62.5%}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

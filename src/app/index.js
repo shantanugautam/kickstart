@@ -1,6 +1,15 @@
-'use strict';
 
-angular.module('mmLandingPages', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router'])
+
+angular.module('mmLandingPages',
+    [
+    'ngAnimate',
+    'ngCookies',
+    'ngTouch',
+    'ngSanitize',
+    'firebase',
+    'ui.router'
+
+    ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
