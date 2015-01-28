@@ -1,0 +1,44 @@
+<div class="ngdialog-header">
+    <h3>Provide the following details and we will contact you with any udpates!</h3>
+</div>
+<div class="ngdialog-message">
+    <form ng-submit="addUser()">
+        <input type="hidden"
+            ng-model="user.datecreated"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="new Date()"  />
+        <div class="section-form">
+            <input type="text"
+                ng-model="user.name"
+                ng-model-options="{ updateOn: 'addUser' }"
+                placeholder="Name" autofocus/>
+        </div>
+        <div class="section-form">
+            <input type="email"
+                ng-model="user.email"
+                ng-model-options="{ updateOn: 'addUser' }"
+                ng-required
+                placeholder="Email" />
+        </div>
+        <div class="section-form">
+            <input type="tel"
+                ng-model="user.mobile"
+                ng-model-options="{ updateOn: 'addUser' }"
+                placeholder="Mobile" />
+        </div>
+        <input type="hidden"
+            ng-model="user.interest"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="user.interest='YES'" />
+        <input type="hidden"
+            ng-model="user.reasons"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="user.reasons='NA'" />
+      <button type="submit">Register</button>
+    </form>
+</div>
+<div class="ngdialog-success">
+    <img src="assets/images/success.png">
+    <h3>Thank you!</h3>
+    <p>We’ll be in touch once we have any udpates!</p>
+</div>

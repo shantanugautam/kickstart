@@ -29,15 +29,16 @@ $subtitle-color :  #222;
     }
 }
 $banner-bg : #E4E0D7;
+$pattern-bg : #fcb215;
 .wrap {
     @extend %wrap;
     &--patternbg {
         @extend %wrap;
+        background:$pattern-bg url('../assets/images/repeatingbg.png');
         @media screen and (min-width:767px) {
             padding-top:4em;
             padding-bottom:4em;
         }
-        background: url('../assets/images/repeatingbg.png');
     }
     &--banner {
         @extend %wrap;
@@ -137,9 +138,29 @@ nav {
         max-height: 40px;
     }
     ul {
+        @extend .clearfix;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+    .util-pullRight {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        text-transform: none;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            height: 40px;
+        }
+    }
+}
+
+.util-pullLeft {
+    float: left;
+}
+
+.util-pullRight {
+    float: right;
 }
 
 $footer-bg : #404041;

@@ -1,5 +1,4 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
 <section class="wrap--banner">
     <div class="content-inner">
         <div class="msg">
@@ -8,24 +7,23 @@
                 Imba Gamer Gold Card
                 <span class="small">The only card for gamers</span>
             </h1>
+            <button type="button"
+                    ng-dialog="/components/registerinterest/registerinterest.html"
+                    ng-dialog-controller="registerinterestCtrl"
+                    ng-dialog-class="ngdialog-theme-default"
+                    ng-dialog-show-close="false"
+                    ng-dialog-close-previous>Yes, I'm interested</button>
+            <button type="button"
+                    ng-dialog="/components/feedback/feedback.html"
+                    ng-dialog-controller="feedbackCtrl"
+                    ng-dialog-class="ngdialog-theme-default"
+                    ng-dialog-show-close="false"
+                    ng-dialog-close-previous>Not interested</button>
         </div>
     </div>
 </section>
-
-
-
-    <form ng-submit="addUser()">
-      <input type="email" ng-model="user.email" ng-model-options="{ updateOn: 'addUser' }" placeholder="Author" autofocus/>
-      <input type="text" ng-model="user.interest" ng-model-options="{ updateOn: 'addUser' }" placeholder="Title" />
-      <button type="submit">Add</button>
-    </form>
-
-
-        <li ng-repeat='user in users'>
-          <strong class='example-chat-username'>{{user.email}}</strong>
-          {{user.interest}}
-        </li>
 <div ng-include="'components/works/works.html'"></div>
 <div ng-include="'components/merchants/merchants.html'"></div>
 <div ng-include="'components/benefits/benefits.html'"></div>
 <div ng-include="'components/footer/footer.html'"></div>
+

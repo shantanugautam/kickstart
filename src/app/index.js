@@ -7,7 +7,8 @@ angular.module('mmLandingPages',
     'ngTouch',
     'ngSanitize',
     'firebase',
-    'ui.router'
+    'ui.router',
+    'ngDialog'
 
     ])
   .config(function ($stateProvider, $urlRouterProvider) {

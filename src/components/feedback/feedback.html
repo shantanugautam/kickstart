@@ -1,0 +1,40 @@
+<div class="ngdialog-header">
+    <h3>Could you please tell us why?</h3>
+</div>
+<div class="ngdialog-message">
+    <form ng-submit="addUser()">
+        <input type="hidden"
+            ng-model="user.date"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="'new Date()'"  />
+        <input type="hidden"
+            ng-model="user.name"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="user.name='NA'"/>
+        <input type="hidden"
+            ng-model="user.email"
+            ng-model-options="{ updateOn: 'addUser' }"
+            placeholder="Email" />
+        <input type="hidden"
+            ng-model="user.mobile"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="user.mobile='NA'" />
+        <input type="hidden"
+            ng-model="user.interest"
+            ng-model-options="{ updateOn: 'addUser' }"
+            ng-init="user.interest='NO'" />
+        <div class="section-form">
+            <textarea
+                ng-model="user.reasons"
+                ng-model-options="{ updateOn: 'addUser' }"
+                placeholder="Please enter your message here"
+                autofocus ></textarea>
+        </div>
+      <button type="submit">Register</button>
+    </form>
+</div>
+<div class="ngdialog-success">
+    <img src="assets/images/success.png">
+    <h3>Thank you!</h3>
+    <p>We appreciate your feedback!</p>
+</div>
