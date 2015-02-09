@@ -1,0 +1,32 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<section class="wrap--data">
+    <div class="content-inner">
+        <h1>Registrations</h1>
+        <section id="cd-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Interest</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="result in results">
+                        <td>{{result.date}}</td>
+                        <td>{{result.name}}</td>
+                        <td>{{result.email}}</td>
+                        <td>{{result.mobile}}</td>
+                        <td>{{result.interest}}</td>
+                        <td>{{result.reason}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</section>
+<div ng-include="'components/footer/footer.html'"></div>
+

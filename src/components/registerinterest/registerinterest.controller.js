@@ -7,11 +7,14 @@ angular.module('mmLandingPages')
 
     // $scope.date = new Date();
     console.log($scope.users);
+    console.log($scope.user.datecreated);
+    $scope.registerSuccess = false;
     // $scope.date = new Date();
     $scope.user = {};
     console.log($scope.user);
     $scope.addUser = function() {
         console.log($scope.user);
         $scope.users.$add($scope.user);
+        $scope.registerSuccess = true;
     }
   });

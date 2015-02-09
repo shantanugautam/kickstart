@@ -9,7 +9,7 @@ Assigned to:        Shantanu Gautam
 Primary use:        Main Site Skin Build
 -------------------------------------------------------------------*/
 
-$primary-colour:#3EA83E;
+$primary-colour:#f2f0db;
 $secondary-colour:#09f;
 $disabled-colour:#f9f9f9;
 
@@ -49,7 +49,7 @@ $disabled-colour:#f9f9f9;
 a.btn-primary ,
 a.btn-primary:link ,
 a.btn-primary:link:visited {
-    @include button($primary-colour, medium,#fff);
+    @include button($primary-colour, small,#5f322c);
 }
 .btn-primary:disabled ,
 a.btn-primary:disabled ,
