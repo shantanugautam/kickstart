@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('mmLandingPages')
-  .controller('feedbackCtrl', function ($scope, $firebase, $timeout, ngDialog) {
-    var base = window.location.path.split("/")[1];
+  .controller('feedbackCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
+    var base = $location.url().split("/")[1];
     console.log(base);
     var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/usersnotinterested';
     var ref = new Firebase(url);
