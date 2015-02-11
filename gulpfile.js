@@ -4,7 +4,7 @@ var gulp = require('gulp');
 
 gulp.paths = {
   src: 'src',
-  dist: 'web',
+  dist: 'interest',
   tmp: '.tmp',
   e2e: 'e2e'
 };
