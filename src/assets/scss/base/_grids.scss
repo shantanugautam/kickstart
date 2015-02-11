@@ -64,6 +64,9 @@ $pattern-bg-color : #fff;
         background:url('../assets/images/image-left.jpg') left bottom no-repeat,url('../assets/images/image-right.png') right bottom no-repeat;
         background-size: 45%;
         background-color: $banner-bg;
+        @media screen and (max-width:1100px) {
+            background-size:cover;
+        }
         .content-inner {
             // background:url('../assets/images/image-left-header-01.png') left bottom no-repeat ,url('../assets/images/image-right-header-01.png') right bottom no-repeat;
             background-size: 25%;
@@ -210,6 +213,8 @@ $box-header-bg: #F4F2ED;
     &--third {
         @extend .clearfix;
         font-size: 0;
+        background : #40585a;
+
         .content-inner {
             padding-bottom:60px;
         }
@@ -230,7 +235,14 @@ $box-header-bg: #F4F2ED;
         }
     }
 }
-
+.wrap {
+    .list-content--third {
+        margin:10px;
+        @media screen and (min-width:768px) {
+            margin:50px;
+        }
+    }
+}
 
 $navbar-bg : #ffffff;
 
