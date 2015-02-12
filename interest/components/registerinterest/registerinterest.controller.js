@@ -1,9 +1,9 @@
 'use strict';
 
+
 angular.module('mmLandingPages')
   .controller('registerinterestCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
-    var base = $location.path();
-    console.log(base);
+    var base = 'interest';
     var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/usersinterested';
     var ref = new Firebase(url);
     $scope.users = $firebase(ref).$asArray();

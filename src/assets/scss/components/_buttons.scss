@@ -9,22 +9,25 @@ Assigned to:        Shantanu Gautam
 Primary use:        Main Site Skin Build
 -------------------------------------------------------------------*/
 
-$primary-colour:#f2f0db;
-$secondary-colour:#09f;
+$primary-colour:#EFF3E5;
+$secondary-colour:#CBBEB5;
 $disabled-colour:#f9f9f9;
 
 
 @mixin button($bg,$size,$color) {
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 7px;
     background: $bg;
     border: 1px solid darken($bg, 10%);
     color: $color !important;
+    box-shadow :0 0 5px darken($bg,25%);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     text-decoration: none;
     transition: background 0.2s ease-out, border 0.2s ease-in;
     position: relative;
     overflow: hidden;
     transform: translate3d(0,0,0);
+    text-transform: uppercase;
     &:hover {
         background: darken($bg,15%);
         background: darken($bg,18%);
@@ -32,11 +35,11 @@ $disabled-colour:#f9f9f9;
     }
     @if $size == "small" {
         font-size: .8rem;
-        padding: .25em 1em;
+        padding: .75em 1em;
     }
     @else if $size == "medium" {
         font-size: 1.2rem;
-        padding: .5em 2em;
+        padding: .75em 2em;
     }
     @else if $size == "large" {
         font-size: 1.4rem;
@@ -49,7 +52,13 @@ $disabled-colour:#f9f9f9;
 a.btn-primary ,
 a.btn-primary:link ,
 a.btn-primary:link:visited {
-    @include button($primary-colour, small,#5f322c);
+    @include button($primary-colour, small,#4C221B);
+}
+.btn-secondary ,
+a.btn-secondary ,
+a.btn-secondary:link ,
+a.btn-secondary:link:visited {
+    @include button(rgba($secondary-colour,.95), small,#4C221B);
 }
 .btn-primary:disabled ,
 a.btn-primary:disabled ,

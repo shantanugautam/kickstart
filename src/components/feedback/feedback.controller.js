@@ -2,9 +2,7 @@
 
 angular.module('mmLandingPages')
   .controller('feedbackCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
-    // var base = $location.url().split("/")[1];
-    var base = $location.path();
-    console.log(base);
+    var base = 'register';
     var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/usersnotinterested';
     var ref = new Firebase(url);
     $scope.users = $firebase(ref).$asArray();

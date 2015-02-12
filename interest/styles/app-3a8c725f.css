@@ -1,5 +1,3 @@
-@import url(../../bower_components/ngDialog/css/ngDialog.css);
-@import url(../../bower_components/ngDialog/css/ngDialog-theme-default.css);
 /*------------------------------------------------------------------
 [Main]
 
@@ -381,7 +379,12 @@ body, html {
 
 .wrap, .wrap--patternbg, .wrap--banner, .wrap--data {
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  background: #F4F2ED;
+  max-width: 1140px;
+  margin: -1px auto 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd; }
   @media screen and (min-width: 767px) {
     %wrap {
       padding-top: 4em;
@@ -398,6 +401,12 @@ body, html {
     height: 20px;
     background: url('../assets/images/seperator.png') center center no-repeat; }
 
+nav.wrap {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 5px #ddd; }
+
 .wrap--patternbg {
   background: #fcb215 url('../assets/images/repeatingbg.png'); }
   @media screen and (min-width: 767px) {
@@ -406,11 +415,24 @@ body, html {
       padding-bottom: 4em; } }
 .wrap--banner {
   overflow: hidden;
-  background: #E4E0D7 url('../assets/images/section-v.png') center bottom no-repeat; }
+  background: url('../assets/images/image-left-header-01.png') left 80% no-repeat, url('../assets/images/image-right-header-01.png') right 80% no-repeat;
+  background-size: 25%; }
+  @media screen and (max-width: 580px) {
+    .wrap--banner {
+      background: url('../assets/images/image-left-header-01-small.png') left 80% no-repeat, url('../assets/images/image-right-header-01-small.png') right 80% no-repeat;
+      background-size: 25%; } }
   .wrap--banner .content-inner {
-    background: url('../assets/images/image-left-header-01.png') left bottom no-repeat, url('../assets/images/image-right-header-01.png') right bottom no-repeat;
-    background-size: 25%;
-    padding-bottom: 10em; }
+    background: url('../assets/images/section-v.png') center 135% no-repeat;
+    padding-bottom: 100px; }
+    .wrap--banner .content-inner h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  .wrap--banner .btn-primary, .wrap--banner .btn-secondary {
+    margin: 5px auto;
+    display: block;
+    width: 200px;
+    font-size: 1.6em; }
 .wrap--data .content-inner {
   text-align: left;
   max-width: 1140px;
@@ -419,19 +441,39 @@ body, html {
   .wrap--data .content-inner h1 {
     text-align: left; }
 
+.padding__top {
+  padding-top: 100px; }
+  @media screen and (max-width: 580px) {
+    .padding__top {
+      padding-top: 50px; } }
+
 .msg {
   background: #F68926;
-  width: 320px;
-  height: 320px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   margin: 5em auto;
   padding-top: 4em;
   position: relative; }
   .msg h1 {
-    font-size: 3.2em;
+    font-size: 6.2em;
     font-weight: 700;
+    margin: 1em auto;
     text-transform: uppercase;
     font-family: 'bebasneue', "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    @media screen and (max-width: 580px) {
+      .msg h1 {
+        margin-top: 0; } }
+  .msg h2 {
+    font-size: 1.8em; }
+  @media screen and (max-width: 580px) {
+    .msg {
+      width: 300px;
+      height: 300px; }
+      .msg h1 {
+        font-size: 3.2em; }
+      .msg h2 {
+        font-size: 1.2em; } }
   .msg .small {
     font-size: 0.5em;
     display: block; }
@@ -462,20 +504,35 @@ body, html {
     font-size: 0.9em;
     margin: 0.35em auto 0; }
 
-@media screen and (min-width: 680px) {
-  .content-inner--split .box, .content-inner--split .box--special {
-    float: left;
-    width: 50%; } }
+.content-inner--split {
+  font-size: 0; }
+  .content-inner--split > .box {
+    display: block;
+    width: 100%;
+    font-size: 16px; }
+    @media screen and (max-width: 680px) {
+      .content-inner--split > .box {
+        padding: 15px; } }
+    @media screen and (min-width: 681px) {
+      .content-inner--split > .box {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%; } }
+  .content-inner--split .box--special {
+    font-size: 16px; }
 
 .box img, .box--special img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 94%; }
 
 .box--special {
   border-radius: 5px;
   border: 1px solid #504748;
   background: #fff;
-  max-width: 300px;
   overflow: hidden; }
+  @media screen and (min-width: 681px) {
+    .box--special {
+      max-width: 420px; } }
   .box--special h4 {
     margin: 0;
     font-weight: 700;
@@ -486,9 +543,6 @@ body, html {
     text-align: left;
     margin-left: 1em;
     margin-bottom: 1em; }
-  @media screen and (min-width: 680px) {
-    .box--special {
-      margin-top: 8em; } }
   .box--special .box-header {
     background: #F4F2ED url('../assets/images/star.png') 10px 40% no-repeat;
     background-size: 40px;
@@ -515,6 +569,12 @@ body, html {
     margin: 0;
     padding: 1em;
     width: 100%; }
+    @media screen and (max-width: 580px) {
+      .list-content--third li img {
+        max-width: 80%;
+        height: auto;
+        max-height: 40px;
+        width: auto; } }
     @media screen and (min-width: 581px) {
       .list-content--third li {
         display: inline-block;
@@ -582,6 +642,9 @@ footer {
   border-color: #6b758d;
   box-shadow: 2px 0 0 rgba(0, 0, 0, 0.1); }
 
+body {
+  background: #fff; }
+
 /*------------------------------------------------------------------
 [Main]
 
@@ -600,7 +663,7 @@ Primary use:        Main Site Skin Build
 body {
   font-size: 62.5%; }
 
-.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .item-box:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after {
+.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap--banner .content-inner:after, .item-box:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after, .radio-holder:after {
   content: "";
   display: table;
   clear: both; }
@@ -3220,37 +3283,65 @@ Primary use:        Main Site Skin Build
 -------------------------------------------------------------------*/
 .btn-primary, a.btn-primary, a.btn-primary:link, a.btn-primary:link:visited {
   display: inline-block;
-  border-radius: 3px;
-  background: #f2f0db;
-  border: 1px solid #e4e0b6;
-  color: #5f322c !important;
+  border-radius: 7px;
+  background: #EFF3E5;
+  border: 1px solid #dae3c2;
+  color: #4C221B !important;
+  box-shadow: 0 0 5px #b9cb8e;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
   font-size: 0.8rem;
-  padding: 0.25em 1em; }
+  padding: 0.75em 1em; }
   .btn-primary:hover, a.btn-primary:hover, a.btn-primary:link:hover, a.btn-primary:link:visited:hover {
-    background: #ded8a3;
-    background: #dad398;
+    background: #cfdbb1;
+    background: #c8d6a6;
+    transition: background 0.3s ease-in, border 0.5s ease-out; }
+
+.btn-secondary, a.btn-secondary, a.btn-secondary:link, a.btn-secondary:link:visited {
+  display: inline-block;
+  border-radius: 7px;
+  background: rgba(203, 190, 181, 0.95);
+  border: 1px solid rgba(181, 163, 151, 0.95);
+  color: #4C221B !important;
+  box-shadow: 0 0 5px rgba(150, 123, 106, 0.95);
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease-out, border 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.75em 1em; }
+  .btn-secondary:hover, a.btn-secondary:hover, a.btn-secondary:link:hover, a.btn-secondary:link:visited:hover {
+    background: rgba(171, 150, 136, 0.95);
+    background: rgba(165, 142, 127, 0.95);
     transition: background 0.3s ease-in, border 0.5s ease-out; }
 
 .btn-primary:disabled, a.btn-primary:disabled, a.btn-primary:disabled:link, a.btn-primary:disabled:link:visited .btn-secondary:disabled {
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 7px;
   background: #f9f9f9;
   border: 1px solid #e0e0e0;
   color: #ddd !important;
+  box-shadow: 0 0 5px #b9b9b9;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
   font-size: 1.2rem;
-  padding: 0.5em 2em;
+  padding: 0.75em 2em;
   cursor: disabled; }
   .btn-primary:disabled:hover, a.btn-primary:disabled:hover, a.btn-primary:disabled:link:hover, a.btn-primary:disabled:link:visited .btn-secondary:disabled:hover {
     background: #d3d3d3;
@@ -3259,18 +3350,21 @@ Primary use:        Main Site Skin Build
 
 .btn-negative {
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 7px;
   background: #f9f9f9;
   border: 1px solid #e0e0e0;
   color: #ddd !important;
+  box-shadow: 0 0 5px #b9b9b9;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
   font-size: 1.2rem;
-  padding: 0.5em 2em; }
+  padding: 0.75em 2em; }
   .btn-negative:hover {
     background: #d3d3d3;
     background: #cbcbcb;
@@ -3278,21 +3372,24 @@ Primary use:        Main Site Skin Build
 
 .btn-secondary-small {
   display: inline-block;
-  border-radius: 3px;
-  background: #09f;
-  border: 1px solid #007acc;
+  border-radius: 7px;
+  background: #CBBEB5;
+  border: 1px solid #b6a397;
   color: #fff !important;
+  box-shadow: 0 0 5px #967c6a;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
   font-size: 0.8rem;
-  padding: 0.25em 1em; }
+  padding: 0.75em 1em; }
   .btn-secondary-small:hover {
-    background: #006bb3;
-    background: #0062a3;
+    background: #ab9688;
+    background: #a58e7f;
     transition: background 0.3s ease-in, border 0.5s ease-out; }
 
 .ripple {
@@ -3451,6 +3548,22 @@ Primary use:        Main Site Skin Build
 
 .formMsg-info {
   color: #666; }
+
+.radio-holder {
+  padding: 0.5em 0;
+  display: block; }
+  .radio-holder input[type="radio"] {
+    display: inline-block;
+    background: #333;
+    max-width: 30px;
+    box-shadow: none !important;
+    vertical-align: middle;
+    background: #1E373B; }
+  .radio-holder p {
+    display: inline-block;
+    margin: 5px 0 0 10px;
+    color: #fff;
+    vertical-align: middle; }
 
 @-webkit-keyframes ngdialog-fadeout {
   0% {
