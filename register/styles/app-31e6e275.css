@@ -425,7 +425,7 @@ body {
     margin: 0 auto; }
   .wrap--banner .content-inner {
     padding-bottom: 10em; }
-  .wrap--banner .btn-primary {
+  .wrap--banner .btn-primary, .wrap--banner .btn-secondary {
     margin: 20px auto;
     display: block;
     width: 200px;
@@ -616,7 +616,7 @@ nav {
   float: right; }
 
 footer {
-  background: #404041;
+  background: #182425;
   color: #939597;
   padding-top: 2em;
   padding-bottom: 2em; }
@@ -669,7 +669,7 @@ Primary use:        Main Site Skin Build
 body {
   font-size: 62.5%; }
 
-.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .item-box:after, .box:after, .box--content:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after {
+.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .item-box:after, .box:after, .box--content:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after, .radio-holder:after {
   content: "";
   display: table;
   clear: both; }
@@ -719,10 +719,10 @@ Primary use:        Main Site Skin Build
 .btn-primary, a.btn-primary, a.btn-primary:link, a.btn-primary:link:visited {
   display: inline-block;
   border-radius: 3px;
-  background: #A3CBC7;
-  border: 1px solid #82b9b3;
+  background: #CCE8E6;
+  border: 1px solid #a9d8d4;
   color: #5f322c !important;
-  box-shadow: 0 0 5px #569892;
+  box-shadow: 0 0 5px #74c0ba;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
@@ -734,8 +734,30 @@ Primary use:        Main Site Skin Build
   font-size: 0.8rem;
   padding: 0.75em 1em; }
   .btn-primary:hover, a.btn-primary:hover, a.btn-primary:link:hover, a.btn-primary:link:visited:hover {
-    background: #72afa9;
-    background: #68aaa3;
+    background: #97d0cb;
+    background: #8dcbc6;
+    transition: background 0.3s ease-in, border 0.5s ease-out; }
+
+.btn-secondary, a.btn-secondary, a.btn-secondary:link, a.btn-secondary:link:visited {
+  display: inline-block;
+  border-radius: 3px;
+  background: rgba(163, 203, 199, 0.95);
+  border: 1px solid rgba(130, 184, 179, 0.95);
+  color: #5f322c !important;
+  box-shadow: 0 0 5px rgba(86, 152, 145, 0.95);
+  text-decoration: none;
+  transition: background 0.2s ease-out, border 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
+  font-family: Times, serif;
+  font-size: 0.8rem;
+  padding: 0.75em 1em; }
+  .btn-secondary:hover, a.btn-secondary:hover, a.btn-secondary:link:hover, a.btn-secondary:link:visited:hover {
+    background: rgba(114, 175, 169, 0.95);
+    background: rgba(104, 169, 163, 0.95);
     transition: background 0.3s ease-in, border 0.5s ease-out; }
 
 .btn-primary:disabled, a.btn-primary:disabled, a.btn-primary:disabled:link, a.btn-primary:disabled:link:visited .btn-secondary:disabled {
@@ -786,10 +808,10 @@ Primary use:        Main Site Skin Build
 .btn-secondary-small {
   display: inline-block;
   border-radius: 3px;
-  background: #09f;
-  border: 1px solid #007acc;
+  background: #A3CBC7;
+  border: 1px solid #82b9b3;
   color: #fff !important;
-  box-shadow: 0 0 5px #004c80;
+  box-shadow: 0 0 5px #569892;
   text-decoration: none;
   transition: background 0.2s ease-out, border 0.2s ease-in;
   position: relative;
@@ -801,8 +823,8 @@ Primary use:        Main Site Skin Build
   font-size: 0.8rem;
   padding: 0.75em 1em; }
   .btn-secondary-small:hover {
-    background: #006bb3;
-    background: #0062a3;
+    background: #72afa9;
+    background: #68aaa3;
     transition: background 0.3s ease-in, border 0.5s ease-out; }
 
 .ripple {
@@ -961,6 +983,22 @@ Primary use:        Main Site Skin Build
 
 .formMsg-info {
   color: #666; }
+
+.radio-holder {
+  padding: 0.5em 0;
+  display: block; }
+  .radio-holder input[type="radio"] {
+    display: inline-block;
+    background: #333;
+    max-width: 30px;
+    box-shadow: none !important;
+    vertical-align: middle;
+    background: #1E373B; }
+  .radio-holder p {
+    display: inline-block;
+    margin: 5px 0 0 10px;
+    color: #1E373B;
+    vertical-align: middle; }
 
 @-webkit-keyframes ngdialog-fadeout {
   0% {
@@ -1201,6 +1239,8 @@ body.ngdialog-open {
   overflow: hidden;
   width: 320px !important; }
 
+.ngdialog .btn-primary {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 .ngdialog-header {
   background: #fff;
   padding: 1em 2em; }

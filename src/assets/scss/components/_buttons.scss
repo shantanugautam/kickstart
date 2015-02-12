@@ -9,8 +9,8 @@ Assigned to:        Shantanu Gautam
 Primary use:        Main Site Skin Build
 -------------------------------------------------------------------*/
 
-$primary-colour:#A3CBC7;
-$secondary-colour:#09f;
+$primary-colour:#CCE8E6;
+$secondary-colour:#A3CBC7;
 $disabled-colour:#f9f9f9;
 
 
@@ -53,6 +53,12 @@ a.btn-primary ,
 a.btn-primary:link ,
 a.btn-primary:link:visited {
     @include button($primary-colour, small,#5f322c);
+}
+.btn-secondary ,
+a.btn-secondary ,
+a.btn-secondary:link ,
+a.btn-secondary:link:visited {
+    @include button(rgba($secondary-colour,.95), small,#5f322c);
 }
 .btn-primary:disabled ,
 a.btn-primary:disabled ,

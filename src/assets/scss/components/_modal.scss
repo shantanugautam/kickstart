@@ -310,6 +310,9 @@ $modal-header-bg: #fff;
 }
 
 .ngdialog {
+    .btn-primary {
+        font-family:  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
     &-header {
         background: $modal-header-bg;
         padding: 1em 2em;

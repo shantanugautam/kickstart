@@ -154,3 +154,24 @@ $label-color : #09f;
         @extend %formMsg;
     }
 }
+
+
+.radio-holder {
+    @extend .clearfix;
+    padding:0.5em 0;
+    display: block;
+    input[type="radio"] {
+        display: inline-block;
+        background  : #333;
+        max-width: 30px;
+        box-shadow: none !important;
+        vertical-align: middle;
+        background:#1E373B;
+    }
+    p {
+        display: inline-block;
+        margin:5px 0 0 10px;
+        color: #1E373B;
+        vertical-align: middle;
+    }
+}

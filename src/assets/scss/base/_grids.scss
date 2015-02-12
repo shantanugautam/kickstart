@@ -73,7 +73,8 @@ $pattern-bg-color : #fff;
         .content-inner {
             padding-bottom:10em;
         }
-        .btn-primary {
+        .btn-primary ,
+        .btn-secondary{
             margin: 20px auto;
             display: block;
             width: 200px;
@@ -334,7 +335,7 @@ nav {
     float: right;
 }
 
-$footer-bg : #404041;
+$footer-bg : #182425;
 $footer-color : #939597;
 
 footer {
