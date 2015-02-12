@@ -19,12 +19,8 @@ Primary use:        Main Site Skin Build
 @import "../assets/scss/helper/text";
 @import "../assets/scss/helper/display";
 
-@import "../assets/scss/helper/animated";
-@import "../../bower_components/ngDialog/css/ngDialog.css";
-@import "../../bower_components/ngDialog/css/ngDialog-theme-default.css";
-
-
-
 @import "../assets/scss/components/buttons";
 @import "../assets/scss/components/forms";
 @import "../assets/scss/components/modal";
+
+@import "../assets/scss/helper/animated";

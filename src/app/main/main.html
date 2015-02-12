@@ -1,16 +1,14 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<nav class="wrap nav" ng-include="'components/navbar/navbar.html'"></nav>
 <section class="wrap--banner">
     <div class="content-inner">
-        <p class="utility-image__replace">Coming Soon</p>
         <h1 class="utility-image__replace">Imba Game Gold Card</h1>
-        <h2 class="utility-image__replace">The Only card for gamers</h2>
-        <h3 class="utility-image__replace">10% Cashback and exclusive in game items!</h3>
+        <h3 class="">10% Cashback &amp; exclusive <br/>in game items!</h3>
             <button type="button" class="btn-primary"
                     ng-dialog="components/registerinterest/registerinterest.html"
                     ng-dialog-controller="registerinterestCtrl"
                     ng-dialog-class="ngdialog-theme-default"
                     ng-dialog-show-close="false"
-                    ng-dialog-close-previous>Yes, I'm interested</button>
+                    ng-dialog-close-previous>I'm interested</button>
             <button type="button" class="btn-primary"
                     ng-dialog="components/feedback/feedback.html"
                     ng-dialog-controller="feedbackCtrl"
@@ -19,8 +17,8 @@
                     ng-dialog-close-previous>Not interested</button>
     </div>
 </section>
-<div ng-include="'components/works/works.html'"></div>
-<div ng-include="'components/benefits/benefits.html'"></div>
-<div ng-include="'components/merchants/merchants.html'"></div>
-<div ng-include="'components/footer/footer.html'"></div>
+<section class="wrap" ng-include="'components/works/works.html'"></section>
+<section class="wrap--patternbg" ng-include="'components/benefits/benefits.html'"></section>
+<section class="wrap" ng-include="'components/merchants/merchants.html'"></section>
+<footer class="wrap" ng-include="'components/footer/footer.html'"></footer>
 

@@ -299,8 +299,8 @@ body.ngdialog-open {
 
 
 
-$modal-bg :#F7931D;
-$modal-header-bg: #FCBE67;
+$modal-bg :#fff;
+$modal-header-bg: #fff;
 
 .ngdialog-content {
     background: $modal-bg !important;
@@ -342,5 +342,10 @@ $modal-header-bg: #FCBE67;
         p {
             margin: auto;
         }
+    }
+    input , textarea {
+        background : #1c383c;
+        font-size: 13px;
+        color : #fff;
     }
 }

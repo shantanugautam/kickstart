@@ -9,7 +9,7 @@ Assigned to:        Shantanu Gautam
 Primary use:        Main Site Skin Build
 -------------------------------------------------------------------*/
 
-$primary-colour:#f2f0db;
+$primary-colour:#A3CBC7;
 $secondary-colour:#09f;
 $disabled-colour:#f9f9f9;
 
@@ -20,11 +20,14 @@ $disabled-colour:#f9f9f9;
     background: $bg;
     border: 1px solid darken($bg, 10%);
     color: $color !important;
+    box-shadow :0 0 5px darken($bg,25%);
     text-decoration: none;
     transition: background 0.2s ease-out, border 0.2s ease-in;
     position: relative;
     overflow: hidden;
     transform: translate3d(0,0,0);
+    text-transform: uppercase;
+    font-family: Times , serif;
     &:hover {
         background: darken($bg,15%);
         background: darken($bg,18%);
@@ -32,11 +35,11 @@ $disabled-colour:#f9f9f9;
     }
     @if $size == "small" {
         font-size: .8rem;
-        padding: .25em 1em;
+        padding: .75em 1em;
     }
     @else if $size == "medium" {
         font-size: 1.2rem;
-        padding: .5em 2em;
+        padding: .75em 2em;
     }
     @else if $size == "large" {
         font-size: 1.4rem;
