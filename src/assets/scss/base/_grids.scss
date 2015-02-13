@@ -343,13 +343,20 @@ footer {
     color: $footer-color;
     padding-top: 2em;
     padding-bottom: 2em;
+    li {
+        display: inline-block;
+    }
     a {
         color: $footer-color;
+        text-decoration: underline;
+        display: inline-block;
+        cursor: pointer;
     }
     p {
         color: $footer-color;
     }
 }
+
 
 
 $main-text: #333; // main text

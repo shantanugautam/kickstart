@@ -620,8 +620,13 @@ footer {
   color: #939597;
   padding-top: 2em;
   padding-bottom: 2em; }
+  footer li {
+    display: inline-block; }
   footer a {
-    color: #939597; }
+    color: #939597;
+    text-decoration: underline;
+    display: inline-block;
+    cursor: pointer; }
   footer p {
     color: #939597; }
 
@@ -669,7 +674,7 @@ Primary use:        Main Site Skin Build
 body {
   font-size: 62.5%; }
 
-.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .item-box:after, .box:after, .box--content:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after, .radio-holder:after {
+.clearfix:after, .clear:after, .wrap:after, .wrap--patternbg:after, .wrap--banner:after, .wrap--data:after, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .wrap, .wrap--patternbg, .wrap--banner, .wrap--data, .item-box:after, .box:after, .box--content:after, .content-inner--split:after, .list-content--third:after, nav ul:after, .message-error:after, .radio-holder:after, .stats:after {
   content: "";
   display: table;
   clear: both; }
@@ -1271,6 +1276,49 @@ body.ngdialog-open {
   background: #1c383c;
   font-size: 13px;
   color: #fff; }
+
+.content-hero {
+  background: linear-gradient(169deg, #045e9e 40%, #73c2fb 100%);
+  background-color: #045e9e;
+  color: #fff;
+  text-align: center;
+  padding: 4em 1em; }
+
+.wrap--data {
+  width: 100%;
+  max-width: 100%; }
+  .wrap--data .content-inner {
+    padding: 1em; }
+
+.number-large, .number-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
+.number-large {
+  font-size: 4em; }
+.number-medium {
+  font-size: 2em; }
+
+.stats {
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  width: 20%;
+  margin: 2.5%;
+  border: 1px inset rgba(255, 255, 255, 0.1);
+  display: inline-block; }
+  .stats .top {
+    width: 100%;
+    font-size: 16px;
+    padding: 1em;
+    border-bottom: 1px inset rgba(255, 255, 255, 0.1); }
+  .stats .button-split {
+    font-size: 16px;
+    padding: 0.5em 1em;
+    width: 50%;
+    display: inline-block; }
+    .stats .button-split:first-of-type {
+      border-right: 1px inset rgba(255, 255, 255, 0.1); }
 
 #masterUI {
   transition: all 0.5s; }
