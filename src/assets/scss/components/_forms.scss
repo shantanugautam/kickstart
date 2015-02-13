@@ -13,7 +13,7 @@ $label-color : #09f;
     // display: flex;
     width:100%;
     // flex-flow: row wrap;
-    padding: 15px;
+    padding: 5px 15px;
     .infoTip {
         display: block;
         margin-bottom: 15px;
@@ -21,11 +21,12 @@ $label-color : #09f;
     }
     input,
     textarea {
-        padding: .5rem 10px .25rem;
+        padding: .5rem 10px .5rem;
         border: 0 !important;
         box-shadow: 0 2px 0px 0px rgba(102, 102, 102, 0.08) !important;
         width: 100%;
         max-width: 100%;
+        font-size: 12px;
         flex: 1;
         font-size: 1rem;
         ~ span {

@@ -3,16 +3,13 @@
 </div>
 <div class="ngdialog-message" ng-hide="registerSuccess">
     <form ng-submit="addUser()" name="register">
-        <input type="hidden"
-            ng-model="user.datecreated"
-            ng-model-options="{ updateOn: 'addUser' }"  />
         <div class="section-form">
             <input type="text"
                 ng-model="user.name"
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Name" autofocus/>
-                <div class="formMsg-error" ng-show="register.name.$dirty && register.name.$invalid">Invalid:
+                <div class="formMsg-error" ng-show="user.name.$dirty && user.name.$invalid">Invalid:
                   <span ng-show="register.name.$error.required">Kindly enter a Name.</span>
                 </div>
         </div>
@@ -22,7 +19,7 @@
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Email" />
-                <div class="formMsg-error" ng-show="register.email.$dirty && register.email.$invalid">Invalid:
+                <div class="formMsg-error" ng-show="user.email.$dirty && user.email.$invalid">Invalid:
                   <span ng-show="register.email.$error.required">Kindly enter an email address.</span>
                 </div>
         </div>
@@ -32,7 +29,7 @@
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Mobile" />
-                <div class="formMsg-error" ng-show="register.mobile.$dirty && register.mobile.$invalid">Invalid:
+                <div class="formMsg-error" ng-show="user.mobile.$dirty && user.mobile.$invalid">Invalid:
                   <span ng-show="register.mobile.$error.required">Kindly enter a mobile no.</span>
                 </div>
         </div>

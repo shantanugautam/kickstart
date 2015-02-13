@@ -54,12 +54,16 @@ $pattern-bg : #fcb215;
     &--banner {
         @extend %wrap;
         overflow: hidden;
-            background : url('../assets/images/image-left-header-01.png') left 80% no-repeat, url('../assets/images/image-right-header-01.png') right 80% no-repeat;
+        background : url('../assets/images/image-left-header-01-small.png') left 80% no-repeat, url('../assets/images/image-right-header-01-small.png') right 80% no-repeat, #e5e2d9;
+        background-size: 25%;
+        @media screen and (min-width:581px) {
+            background : url('../assets/images/image-left-header-01.png') left 80% no-repeat, url('../assets/images/image-right-header-01.png') right 80% no-repeat,#e5e2d9;
             background-size: 25%;
-            @media screen and (max-width:580px) {
-                background : url('../assets/images/image-left-header-01-small.png') left 80% no-repeat, url('../assets/images/image-right-header-01-small.png') right 80% no-repeat;
-                background-size: 25%;
-            }
+        }
+        @media screen and (min-width:981px) {
+            background : url('../assets/images/image-left-header-01.png') left 60% no-repeat, url('../assets/images/image-right-header-01.png') right 60% no-repeat,#e5e2d9;
+            background-size: 25%;
+        }
         .content-inner {
             @extend .clearfix;
             background: url('../assets/images/section-v.png') center 135% no-repeat;
@@ -101,16 +105,16 @@ $pattern-bg : #fcb215;
 $msg-bg: #F68926;
 .msg {
     background:$msg-bg;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     margin: 5em auto;
     padding-top:4em;
     position: relative;
     h1 {
-        font-size: 6.2em;
+        font-size: 5.4em;
         font-weight: 700;
-        margin:1em auto;
+        margin:1em auto 0;
         text-transform: uppercase;
         font-family: 'bebasneue', "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         @media screen and (max-width:580px) {
@@ -189,7 +193,7 @@ $msg-bg: #F68926;
         }
         .box--special {
             font-size: 16px;
-            // max-width: 80%;
+            margin:auto;
         }
     }
 }
@@ -325,8 +329,14 @@ footer {
     color: $footer-color;
     padding-top: 2em;
     padding-bottom: 2em;
+    li {
+        display: inline-block;
+    }
     a {
         color: $footer-color;
+        text-decoration: underline;
+        display: inline-block;
+        cursor: pointer;
     }
     p {
         color: $footer-color;

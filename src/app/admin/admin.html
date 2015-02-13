@@ -1,7 +1,42 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<nav class="wrap nav" ng-include="'components/navbar/navbar.html'"></nav>
 <section class="wrap--data">
+    <div class="content-hero">
+        <ul class="stats">
+            <li class="top">
+                <span class="number-large">{{UsersNetNot.interest + UsersNetNot.register}}</span><span>Not Interested</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNetNot.register}}</span><span>/register</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNetNot.interest}}</span><span>/interest</span>
+            </li>
+        </ul>
+        <ul class="stats">
+            <li class="top">
+                <span class="number-large">{{UsersNet.interest + UsersNet.register}}</span><span>Queries</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNet.register}}</span><span>/register</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNet.interest}}</span><span>/interest</span>
+            </li>
+        </ul>
+        <ul class="stats">
+            <li class="top">
+                <span class="number-large">{{UsersNetContact.interest + UsersNetContact.register}}</span><span>Contact Enquiries</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNetContact.register}}</span><span>/register</span>
+            </li>
+            <li class="button-split">
+                <span class="number-medium">{{UsersNetContact.interest}}</span><span>/interest</span>
+            </li>
+        </ul>
+    </div>
     <div class="content-inner">
-        <h1>Registrations</h1>
+
         <section id="cd-table">
             <table>
                 <thead>
@@ -10,23 +45,25 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Mobile</th>
-                        <th>Interest</th>
-                        <th>Comments</th>
+                        <th>Referrer</th>
+                        <th>Domain</th>
+                        <th>User Agent</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="result in results">
-                        <td>{{result.date}}</td>
+                    <tr ng-repeat="result in usersonInterest">
+                        <td>{{result.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{result.name}}</td>
                         <td>{{result.email}}</td>
                         <td>{{result.mobile}}</td>
-                        <td>{{result.interest}}</td>
-                        <td>{{result.reason}}</td>
+                        <td>{{result.referrer}}</td>
+                        <td>{{result.domain}}</td>
+                        <td>{{result.useragent}}</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </div>
 </section>
-<div ng-include="'components/footer/footer.html'"></div>
+<footer class="wrap" ng-include="'components/footer/footer.html'"></footer>
 
