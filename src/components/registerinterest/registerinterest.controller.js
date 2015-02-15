@@ -2,9 +2,9 @@
 
 
 angular.module('mmLandingPages')
-  .controller('registerinterestCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
+  .controller('registerinterestCtrl', function ($scope, $firebase, $location, $timeout, ngDialog, FIREBASE_URL) {
     var base = 'interest';
-    var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/usersinterested';
+    var url = FIREBASE_URL + base + '/usersinterested';
     var ref = new Firebase(url);
     $scope.users = $firebase(ref).$asArray();
     $scope.registerSuccess = false;
