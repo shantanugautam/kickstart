@@ -9,9 +9,6 @@
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Name" autofocus/>
-                <div class="formMsg-error" ng-show="user.name.$dirty && user.name.$invalid">Invalid:
-                  <span ng-show="register.name.$error.required">Kindly enter a Name.</span>
-                </div>
         </div>
         <div class="section-form">
             <input type="email"
@@ -19,9 +16,13 @@
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Email" />
-                <div class="formMsg-error" ng-show="user.email.$dirty && user.email.$invalid">Invalid:
-                  <span ng-show="register.email.$error.required">Kindly enter an email address.</span>
-                </div>
+        </div>
+        <div class="section-form">
+            <input type="number"
+                ng-model="user.age"
+                required
+                ng-model-options="{ updateOn: 'addUser' }"
+                placeholder="Age" />
         </div>
         <div class="section-form">
             <input type="tel"
@@ -29,9 +30,6 @@
                 required
                 ng-model-options="{ updateOn: 'addUser' }"
                 placeholder="Mobile" />
-                <div class="formMsg-error" ng-show="user.mobile.$dirty && user.mobile.$invalid">Invalid:
-                  <span ng-show="register.mobile.$error.required">Kindly enter a mobile no.</span>
-                </div>
         </div>
         <div class="section-form">
             <button class="btn-primary btn-blk" type="submit">Submit</button>
@@ -43,3 +41,18 @@
     <h3>Thank you!</h3>
     <p>We’ll be in touch once we have any udpates!</p>
 </div>
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021874300262&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>

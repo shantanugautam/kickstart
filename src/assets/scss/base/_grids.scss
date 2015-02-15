@@ -367,39 +367,6 @@ $row-height: 42px;
 
 
 
-#cd-table {
-    table {
-        width: 100%;
-    }
-    td {
-        position: relative;
-        text-align: left;
-        padding: 0 1em;
-        border-bottom: 1px solid $cell-border;
-        height: $row-height;
-        background-color: $cell-bg;
-        color: #787a8d;
-        line-height: $row-height;
-    }
-    tbody {
-        tr:nth-child(odd) {
-            background-color: #f6f7fa;
-        }
-    }
-    th {
-        position: relative;
-        text-align: center;
-        padding: 0 1em;
-        border-bottom: 1px solid $cell-border;
-        height: $row-height;
-        font-size: 1.2em;
-        line-height: $row-height;
-        background: rgba(121, 130, 153, 0.95);
-        color: #fff;
-        border-color: #6b758d;
-        box-shadow: 2px 0 0 rgba(0, 0, 0, 0.1);
-    }
-}
 
 // @include keyframes(cd-scroll-right) {
 //     0%, 100% {

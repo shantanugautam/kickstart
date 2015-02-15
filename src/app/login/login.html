@@ -1,21 +1,32 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<nav class="wrap nav" ng-include="'components/navbar/navbar.html'"></nav>
 <section class="wrap--data">
+    <div class="content-hero">
+        <h1>Login To admin Panel</h1>
+    </div>
     <div class="content-inner">
-        <h1>Registrations</h1>
         <section id="cd-table">
-        <form ng-submit="login()" name="formLogin">
-            <input type="email"
-                ng-model="admin.email"
-                ng-model-options="{ updateOn: 'login' }"
-            >
-            <input type="password"
-                ng-model="admin.password"
-                ng-model-options="{ updateOn: 'login' }"
-                >
-            <button>Login</button>
-        </form>
+            <form ng-submit="login()" name="formLogin" class="form-admin">
+                <div class="section-form">
+                    <input type="email"
+                        ng-model="admin.email"
+                        placeholder="email"
+                        required
+                        ng-model-options="{ updateOn: 'login' }"
+                    >
+                </div>
+                <div class="section-form">
+                    <input type="password"
+                        ng-model="admin.password"
+                        placeholder="password"
+                        required
+                        ng-model-options="{ updateOn: 'login' }"
+                        >
+                </div>
+                <div class="section-form">
+                    <button class="btn-primary">Login</button>
+                </div>
+            </form>
         </section>
     </div>
 </section>
-<div ng-include="'components/footer/footer.html'"></div>
 
