@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('mmLandingPages')
-  .controller('feedbackCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
-    var base = 'register';
-    var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/usersnotinterested';
+  .controller('feedbackCtrl', function ($scope, $firebase, $location, $timeout, ngDialog, FIREBASE_URL) {
+    var base = 'interest';
+    var url = FIREBASE_URL + base + '/usersnotinterested';
     var ref = new Firebase(url);
     $scope.users = $firebase(ref).$asArray();
     $scope.feedbackSuccess = false;
