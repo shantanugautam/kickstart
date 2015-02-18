@@ -1,0 +1,38 @@
+<div class="ngdialog-header" ng-hide="feedbackSuccess">
+    <h3><span style="display:inline-block;vertical-align:middle;">Could you please tell us why?</span><img style="display:inline-block;vertical-align:middle;margin-top:-5px;" height="30" src="assets/images/sadface.png"></h3>
+</div>
+<div class="ngdialog-message" ng-hide="feedbackSuccess">
+    <form name="feedback" ng-submit="addUser()">
+        <div class="section-form">
+            <label for="not_interested" class="radio-holder">
+                <input id="not_interested" type="radio" name="reason" value="Not Interseted at all" ng-model="user.reasons">
+                <p>Not Interseted at all</p>
+            </label>
+            <label for="poor_benefits" class="radio-holder">
+                <input id="poor_benefits" type="radio" name="reason" value="The benefits don't attract me" ng-model="user.reasons">
+                <p>The benefits don't attract me.</p>
+            </label>
+            <label for="other" class="radio-holder">
+                <input id="other" type="radio" name="reason" value="Others (Please specify)" ng-model="user.reasons">
+                <p>Others (Please specify)</p>
+            </label>
+        </div>
+        <div class="section-form">
+            <textarea
+                ng-model="user.reasons.other"
+                placeholder="Please enter your message here"
+                autofocus ></textarea>
+                <div class="formMsg-error" ng-show="feedback.reasons.$dirty && feedback.reasons.$invalid">Invalid:
+                  <span ng-show="feedback.reasons.$error.required">Kindly enter a reason.</span>
+                </div>
+        </div>
+        <div class="section-form">
+            <button type="submit" class="btn-primary btn-blk">Register</button>
+        </div>
+    </form>
+</div>
+<div class="ngdialog-success" ng-show="feedbackSuccess">
+    <img src="assets/images/success.png">
+    <h3>Thank you!</h3>
+    <p>We appreciate your feedback!</p>
+</div>
