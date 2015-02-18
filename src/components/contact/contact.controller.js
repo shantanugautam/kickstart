@@ -3,7 +3,7 @@
 
 angular.module('mmLandingPages')
   .controller('contactCtrl', function ($scope, $firebase, $location, $timeout, ngDialog) {
-    var base = 'interest';
+    var base = 'register';
     var url = 'https://resplendent-fire-5403.firebaseio.com/' + base + '/correspondence';
     var ref = new Firebase(url);
     $scope.requests = $firebase(ref).$asArray();

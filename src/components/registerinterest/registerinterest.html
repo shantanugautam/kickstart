@@ -3,9 +3,6 @@
 </div>
 <div class="ngdialog-message" ng-hide="registerSuccess">
     <form ng-submit="addUser()" name="register">
-        <input type="hidden"
-            ng-model="user.datecreated"
-            ng-model-options="{ updateOn: 'addUser' }"  />
         <div class="section-form">
             <input type="text"
                 ng-model="user.name"
@@ -25,6 +22,13 @@
                 <div class="formMsg-error" ng-show="register.email.$dirty && register.email.$invalid">Invalid:
                   <span ng-show="register.email.$error.required">Kindly enter an email address.</span>
                 </div>
+        </div>
+        <div class="section-form">
+            <input type="number"
+                ng-model="user.age"
+                required
+                ng-model-options="{ updateOn: 'addUser' }"
+                placeholder="Age" />
         </div>
         <div class="section-form">
             <input type="tel"
