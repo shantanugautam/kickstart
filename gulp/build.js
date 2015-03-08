@@ -8,17 +8,7 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
-var sassdoc = require('sassdoc');
 
-gulp.task('sassdoc', function () {
-  var options = {
-    dest: 'docs',
-    verbose: true
-  };
-
-  return gulp.src(['src/app/index.scss','src/assets/scss/**/*.scss'])
-    .pipe(sassdoc(options));
-});
 
 gulp.task('partials', function () {
   return gulp.src([

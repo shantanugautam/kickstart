@@ -1,7 +1,9 @@
 {
   "name": "marketingKickstart",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "sc5-styleguide": "^0.3.6"
+  },
   "devDependencies": {
     "browser-sync": "~1.7.1",
     "chalk": "~0.5.1",
