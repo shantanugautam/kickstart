@@ -1,4 +1,4 @@
-
+'use strict';
 
 angular.module('mmLandingPages',
     [
@@ -10,7 +10,9 @@ angular.module('mmLandingPages',
     'ui.router',
     'ngDialog'
     ])
-    .constant('FIREBASE_URL', 'https://resplendent-fire-5403.firebaseio.com/')
+    .constant('FIREBASE_URL', 'https://torrid-heat-4778.firebaseio.com/')
+    .constant('BASE_SUBDOMAIN', 'interest')
+    .constant('FB_CONVID', '6021874300262')
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
@@ -21,29 +23,29 @@ angular.module('mmLandingPages',
             .state('login', {
                 url: '/login',
                 templateUrl: 'app/login/login.html',
-                controller: 'LoginCtrl'
+                controller: 'LoginCtrl',
+                resolve: {
+                    "currentAuth": function(Auth) {
+                        return Auth.$waitForAuth();
+                    }
+                }
+            })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: 'app/admin/admin.html',
+                controller: 'AdminCtrl',
+                resolve: {
+                    "currentAuth": function(Auth) {
+                        return Auth.$requireAuth();
+                    }
+                }
             });
-            // .state('admin', {
-            //     url: '/admin',
-            //     templateUrl: 'app/admin/admin.html',
-            //     controller: 'AdminCtrl',
-            //     resolve: {
-            //     // controller will not be loaded until $waitForAuth resolves
-            //     // Auth refers to our $firebaseAuth wrapper in the example above
-            //         "currentAuth": function(Auth) {
-            //           // $waitForAuth returns a promise so the resolve waits for it to complete
-            //           return Auth.$requireAuth();
-            //         }
-            //     }
-            // });
             $urlRouterProvider.otherwise('/');
     })
     .run(function($rootScope, $location, $state) {
-        $rootScope.$on("$routeChangeError", function(event, toState, toParams, fromState, fromParams, error) {
-        // We can catch the error thrown when the $requireAuth promise is rejected
-        // and redirect the user back to the home page
+        $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
             if (error === "AUTH_REQUIRED") {
-              $state.go('admin');
+                $state.go('login');
             }
         });
     });

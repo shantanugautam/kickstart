@@ -5,7 +5,9 @@
     </div>
     <div class="content-inner">
         <section id="cd-table">
+
             <form ng-submit="login()" name="formLogin" class="form-admin">
+            {{$scope.errorormessage}}
                 <div class="section-form">
                     <input type="email"
                         ng-model="admin.email"

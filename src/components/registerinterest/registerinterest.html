@@ -32,6 +32,13 @@
                 placeholder="Mobile" />
         </div>
         <div class="section-form">
+            <select ng-model="user.country" required ng-init="user.country = 'singapore'" ng-model-options="{ updateOn: 'addUser' }">
+                <option value="singapore" selected>Singapore</option>
+                <option value="phillipines">Phillipines</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div class="section-form">
             <button class="btn-primary btn-blk" type="submit">Submit</button>
         </div>
     </form>
@@ -40,19 +47,19 @@
     <img src="assets/images/success.png">
     <h3>Thank you!</h3>
     <p>We’ll be in touch once we have any udpates!</p>
-</div>
-<script>(function() {
-  var _fbq = window._fbq || (window._fbq = []);
-  if (!_fbq.loaded) {
-    var fbds = document.createElement('script');
-    fbds.async = true;
-    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(fbds, s);
-    _fbq.loaded = true;
-  }
-})();
-window._fbq = window._fbq || [];
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
 
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021874300262&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021874300262&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+</div>

@@ -1,17 +1,7 @@
-/*------------------------------------------------------------------
-[Main]
-
-Device:             ALL
-Project:            MMVPAY SG GC
-Version:            1.0
-Last change:        3/11/14 [Init]
-Assigned to:        Shantanu Gautam
-Primary use:        Main Site Skin Build
--------------------------------------------------------------------*/
-
 $primary-colour:#EFF3E5;
 $secondary-colour:#CBBEB5;
 $disabled-colour:#f9f9f9;
+
 
 
 @mixin button($bg,$size,$color) {
@@ -48,12 +38,34 @@ $disabled-colour:#f9f9f9;
 }
 
 
+// Button
+//
+// Your standard button suitable for clicking.
+//
+// Markup:
+// <button class="btn-primary">
+//
+// :hover   - Highlights when hovering.
+//
+
 .btn-primary ,
 a.btn-primary ,
 a.btn-primary:link ,
 a.btn-primary:link:visited {
     @include button($primary-colour, small,#4C221B);
 }
+
+
+// Button
+//
+// Your standard button suitable for clicking.
+//
+// Markup:
+// <button class="btn-secondary">
+//
+// :hover   - Highlights when hovering.
+//
+
 .btn-secondary ,
 a.btn-secondary ,
 a.btn-secondary:link ,

@@ -12,11 +12,5 @@ angular.module('mmLandingPages')
             getQueriesUserBySubdomain : function(key) {
                 return $firebase(new Firebase(FIREBASE_URL + '/' + key + '/correspondence'))
             }
-//     getBroadcast: function(key) {
-//       return $firebase(new Firebase(FIREBASE_URL + '/' + key));
-//     },
-//     getAllBroadcasts: function() {
-//       return $firebase(new Firebase(FIREBASE_URL));
-//     }
         };
     });

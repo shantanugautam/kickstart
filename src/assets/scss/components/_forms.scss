@@ -1,5 +1,7 @@
 $msg-color: #666;
 $label-color : #09f;
+$modal-header-bg: #FCBE67;
+$modal-bg :#F7931D;
 
 %label-movement {
     opacity:1;
@@ -14,21 +16,19 @@ $label-color : #09f;
     width:100%;
     // flex-flow: row wrap;
     padding: 5px 15px;
-    .infoTip {
-        display: block;
-        margin-bottom: 15px;
-        color:$msg-color;
-    }
     input,
-    textarea {
+    textarea,
+    select {
         padding: .5rem 10px .5rem;
-        border: 0 !important;
-        box-shadow: 0 2px 0px 0px rgba(102, 102, 102, 0.08) !important;
+        border:1px solid $modal-bg;
+        transition: all 0.3s ease-in;
+        box-shadow: 0 2px 0px 0px rgba(102, 102, 102, 0.08);
         width: 100%;
         max-width: 100%;
         font-size: 12px;
+        outline: none !important;
         flex: 1;
-        font-size: 1rem;
+        border-radius: 3px;
         ~ span {
             display: block;
             width: 0;
@@ -42,76 +42,17 @@ $label-color : #09f;
         &:disabled {
             color: #a9a9a9;
         }
+        &:focus {
+            border: 1px solid darken($modal-header-bg,40%);
+            box-shadow: 0 2px 0px 0px darken($modal-header-bg,40%);
+            transition: all 0.5s ease-in-out;
+        }
 
     }
-    @media screen and (min-width : 581px) {
-        .section-input--padded {
-            // padding-left : 10px;
-            // padding-right : 10px;
-            .link-edit {
-                  right: 0;
-                  padding: 10px;
-                  font-size: 8px;
-            }
-        }
-    }
-    .section-input {
+    select {
         width: 100%;
-        // flex: 1 1 auto;
-        margin: 0.75rem 0 0.05rem;
-        position: relative;
-        &:focus {
-            outline:1px solid rgba(0,0,0,.1);
-            box-shadow: 0 0 3px $label-color;
-            transition: 0.2s ease-in border , 0.5s ease-in box-shadow;
-        }
-        textarea {
-            &:focus {
-                outline:1px solid rgba(0,0,0,.1);
-                box-shadow: 0 0 3px $label-color;
-                transition: 0.2s ease-in border , 0.5s ease-in box-shadow;
-            }
-        }
-        label {
-            color: #999;
-            padding: 0 0 0 1em;
-            position: absolute;
-            top: 0;
-            left: 0;
-            line-height: 1em;
-            transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
-            pointer-events: none;
-            opacity: 0;
-        }
-        &.wide {
-            width: 100%;
-        }
-        .section-disabled {
-            position:absolute;
-            height:100%;
-            width:100%;
-            z-index:3;
-            background:transparent;
-        }
-        input,textarea {
-            &:focus {
-                outline: 0;
-                ~ label {
-                    @extend %label-movement;
-                }
-                ~ span {
-                    width: 100%;
-                    transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-                }
-            }
-            &:valid ~ label,
-            &.not-empty ~ label {
-                @extend %label-movement;
-            }
-        }
-        &.w-1-2 {
-            width: 50%;
-        }
+        height: 32px;
+        line-height: 32px;
     }
 }
 .message-error {
