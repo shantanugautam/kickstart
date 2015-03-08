@@ -13,18 +13,15 @@
                 <p>The benefits don't attract me.</p>
             </label>
             <label for="other" class="radio-holder">
-                <input id="other" type="radio" name="reason" value="Others (Please specify)" ng-model="user.reasons">
+                <input id="other" type="radio" name="reason" value="Others (Please specify)" ng-model="reasonother">
                 <p>Others (Please specify)</p>
             </label>
         </div>
-        <div class="section-form">
+        <div class="section-form" ng-show="reasonother =='Others (Please specify)'">
             <textarea
-                ng-model="user.reasons.other"
+                ng-model="user.reasons"
                 placeholder="Please enter your message here"
                 autofocus ></textarea>
-                <div class="formMsg-error" ng-show="feedback.reasons.$dirty && feedback.reasons.$invalid">Invalid:
-                  <span ng-show="feedback.reasons.$error.required">Kindly enter a reason.</span>
-                </div>
         </div>
         <div class="section-form">
             <button type="submit" class="btn-primary btn-blk">Register</button>
